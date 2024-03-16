@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* ### Neutral */
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+main {
+    background-color: var(--White);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.picture img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+h1 {
+    color: var(--Very-dark-blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1, .price {
+    font-family: 'Fraunces', serif;
+}
+
+button {
+    width: 100%;
+}
+
+.information-container {
+    padding: 20px;
+}
+
+.category {
+    letter-spacing: .3rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--Dark-cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.price span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    margin-left: 20px;
+}
+
+.button {
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    border: none;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+@media screen and (min-width: 768px){
+    main {
+        flex-direction: row;
+        width: 600px;
+    }
+
+    section {
+        width: 50%;
+    }
+
+    .picture img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        height: 100%;
+    }
+
+    .information-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .information-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+
+}
